@@ -1,0 +1,20 @@
+.header{
+    justify-content: center;
+    height: 15%;
+    background-color: green;
+}
+
+span{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    width: 5rem;
+}
+
+h1{
+    padding-left: 1.2rem;
+    color: yellow;
+    font-size: 1.5rem;
+}

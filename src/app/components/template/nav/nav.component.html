@@ -1,0 +1,17 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav mode="side" opened class="nav-side">
+        <mat-nav-list>
+            <a href="" mat-list-item>
+                <i class="material-icons">home</i>
+                HOME
+            </a>
+            <a routerLink="/catalogo" mat-list-item>
+                <i class="material-icons">list</i>
+                CATÁLOGO
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

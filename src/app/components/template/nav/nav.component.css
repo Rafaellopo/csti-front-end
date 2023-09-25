@@ -1,0 +1,13 @@
+.container{
+    height: 80%;
+    background-color: rgb(228, 228, 228);
+}
+
+i{
+    padding-right: .2rem;
+}
+.nav-side{
+    background-color: green;
+    color: yellow;
+    padding-right: .2rem;
+}
