@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/views/home/home.component';
 import { CatalogoReadComponent } from './components/views/catalogo/catalogo-read/catalogo-read.component';
+import { CatalogoCreateComponent } from './components/views/catalogo/catalogo-create/catalogo-create.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'catalogo',
     component: CatalogoReadComponent
+  },
+  {
+    path: 'catalogo/create',
+    component: CatalogoCreateComponent
   },
 
 ];

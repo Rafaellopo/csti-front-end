@@ -11,20 +11,24 @@
   .title h1 {
     font-size: 2rem;
     font-weight: 500;
-    color: azure;
+    color: yellowgreen;
   }
   
   button{
       margin-bottom: .8rem;
   }
+
+  .mat-form-field {
+    font-size: 1.1rem;
+    width: 97%;
+    margin-left: 0.5rem;
+  }
   
   .table {
     width: 100%;
+    margin-bottom: 2rem;
   }
-  .livros {
-    margin-left: 0.5rem;
-    color: rgb(2, 21, 234);
-  }
+
   .edit {
     color: rgb(224, 210, 10);
   }

@@ -18,4 +18,16 @@ export class CatalogoService {
     const url = `${this.baseUrl}/catalogo`;
     return this.http.get<Catalogo[]>(url)
   }
+
+  findAllSetor(setor: String): Observable<Catalogo[]> {
+    const url = `${this.baseUrl}/catalogo/setor/${setor}`
+    return this.http.get<Catalogo[]>(url)
+  }
+
+  create(catalogo: Catalogo): Observable<Catalogo> {
+    const url = `${this.baseUrl}/catalogo`
+    return this.http.post<Catalogo>(url, catalogo)
+  }
+
+
 }

@@ -9,12 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./catalogo-read.component.css']
 })
 export class CatalogoReadComponent implements OnInit {
-  
-  catalogo: Catalogo[] =[];
+
+  catalogo: Catalogo[] = [];
+
+  catalogoPesquisa: Catalogo = {
+    setor: '',
+    predio: '',
+    sala: '',
+    andar: '',
+  }
 
   title: String = "Catálogo"
 
-  displayedColumns: String[] = ["id", "setor", "predio", "acoes" ]
+  displayedColumns: String[] = ["setor", "predio", "andar", "sala", "acoes"]
 
   constructor(private service: CatalogoService, private router: Router) { }
 
@@ -22,11 +29,21 @@ export class CatalogoReadComponent implements OnInit {
     this.findAll();
   }
 
-  findAll(){
-    this.service.findAll().subscribe((resposta) =>{
-      this.catalogo = resposta
-      console.log(resposta)
-    })
+  findAll() {
+    if (this.catalogoPesquisa.setor == '') {
+      this.service.findAll().subscribe((resposta) => {
+        this.catalogo = resposta
+        console.log(resposta)
+      })
+    } else {
+      this.service.findAllSetor(this.catalogoPesquisa.setor).subscribe((resposta) => {
+        this.catalogo = resposta
+      })
+    }
+  }
+
+  create(): void {
+    this.router.navigate(["catalogo/create"])
   }
 
 
