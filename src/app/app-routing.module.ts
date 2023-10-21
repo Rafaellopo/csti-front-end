@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/views/home/home.component';
 import { CatalogoReadComponent } from './components/views/catalogo/catalogo-read/catalogo-read.component';
 import { CatalogoCreateComponent } from './components/views/catalogo/catalogo-create/catalogo-create.component';
+import { CatalogoUpdateComponent } from './components/views/catalogo/catalogo-update/catalogo-update.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'catalogo/create',
     component: CatalogoCreateComponent
+  },
+  {
+    path: 'catalogo/update/:id',
+    component: CatalogoUpdateComponent
   },
 
 ];

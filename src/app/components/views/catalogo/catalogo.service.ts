@@ -1,4 +1,4 @@
-import { ObserversModule } from '@angular/cdk/observers';
+
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -14,6 +14,11 @@ export class CatalogoService {
 
   constructor(private http: HttpClient) { }
 
+  findById(id: String): Observable<Catalogo>{
+    const url = `${this.baseUrl}/catalogo/${id}`
+    return this.http.get<Catalogo>(url)
+  }
+
   findAll(): Observable<Catalogo[]> {
     const url = `${this.baseUrl}/catalogo`;
     return this.http.get<Catalogo[]>(url)
@@ -27,6 +32,16 @@ export class CatalogoService {
   create(catalogo: Catalogo): Observable<Catalogo> {
     const url = `${this.baseUrl}/catalogo`
     return this.http.post<Catalogo>(url, catalogo)
+  }
+
+  update(catalogo: Catalogo): Observable<void>{
+    const url = `${this.baseUrl}/catalogo/${catalogo.id}`
+    return this.http.put<void>(url, catalogo)
+  }
+
+  delete(id: String): Observable<void>{
+    const url = `${this.baseUrl}/catalogo/${id}`
+    return this.http.delete<void>(url)
   }
 
 

@@ -1,0 +1,24 @@
+<form>
+    <h1>{{title}}</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Setor</mat-label>
+        <input matInput [(ngModel)]="catalogo.setor" type="text" name="setor" placeholder="Ex. DIATU">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Prédio</mat-label>
+        <input matInput [(ngModel)]="catalogo.predio" type="text" name="predio" placeholder="Ex. Anexo 1">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Andar</mat-label>
+        <input matInput [(ngModel)]="catalogo.andar" type="text" name="andar" placeholder="Ex. 1º Andar" id="">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Sala</mat-label>
+        <input matInput [(ngModel)]="catalogo.sala" type="text" name="sala" placeholder="Ex. 105" id="">
+    </mat-form-field>
+    <div class="buttons">
+        <button  (click)="update()"class="mat-elevation-z8" mat-raised-button color="primary">Atualizar</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
+    </div>
+</form>
