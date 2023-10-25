@@ -40,10 +40,14 @@ export class CatalogoReadComponent implements OnInit {
     if (this.catalogoPesquisa.setor == '') {
       this.service.findAll().subscribe((resposta) => {
         this.catalogo = resposta
+      }, err =>{
+        this.service.mensagem('A busca não retornou resultado')
       })
     } else {
       this.service.findAllSetor(this.catalogoPesquisa.setor).subscribe((resposta) => {
         this.catalogo = resposta
+      }, err =>{
+        this.service.mensagem('A busca não retorno resultado')
       })
     }
   }

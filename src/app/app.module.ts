@@ -15,6 +15,9 @@ import { HomeComponent } from './components/views/home/home.component';
 import { CatalogoReadComponent } from './components/views/catalogo/catalogo-read/catalogo-read.component';
 import { CatalogoCreateComponent } from './components/views/catalogo/catalogo-create/catalogo-create.component';
 import { CatalogoUpdateComponent } from './components/views/catalogo/catalogo-update/catalogo-update.component';
+import { PessoaReadComponent } from './components/views/pessoa/pessoa-read/pessoa-read.component';
+import { PessoaCreateComponent } from './components/views/pessoa/pessoa-create/pessoa-create.component';
+import { PessoaUpdateComponent } from './components/views/pessoa/pessoa-update/pessoa-update.component';
 
 
 //Imports Angular material
@@ -27,7 +30,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     HomeComponent,
     CatalogoReadComponent,
     CatalogoCreateComponent,
-    CatalogoUpdateComponent
+    CatalogoUpdateComponent,
+    PessoaReadComponent,
+    PessoaCreateComponent,
+    PessoaUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +63,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSnackBarModule,
 
   ],
   exports: [

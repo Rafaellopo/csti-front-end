@@ -1,0 +1,69 @@
+<div class="content">
+    <div class="title">
+      <h1>{{ title }}</h1>
+    </div>
+    <button  mat-raised-button color="primary" (click)="create()">
+      {{btnCadastro}}
+    </button>
+  
+    <div class="mat-elevation-z8 content-table">
+      <!--<mat-form-field>
+        <input
+          matInput
+          (keyup)="findAll()"
+          placeholder="Procure pelo setor"
+          #input
+          [(ngModel)]="catalogoPesquisa.setor"
+          type="text"
+          name="setor"
+        />
+      </mat-form-field> -->
+  
+      <table class="table" mat-table [dataSource]="pessoa">
+        <!-- Position Column -->
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef>NOME</th>
+          <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
+        </ng-container>
+  
+        <!-- Position Column -->
+        <ng-container matColumnDef="cargo">
+          <th mat-header-cell *matHeaderCellDef>CARGO</th>
+          <td mat-cell *matCellDef="let row">{{ row.cargo }}</td>
+        </ng-container>
+  
+        <!-- Name Column -->
+        <ng-container matColumnDef="equipe">
+          <th mat-header-cell *matHeaderCellDef>EQUIPE</th>
+          <td mat-cell *matCellDef="let row">{{ row.equipe }}</td>
+        </ng-container>
+ 
+        <!-- Weight Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>STATUS</th>
+          <td mat-cell *matCellDef="let row">{{ row.status }}</td>
+        </ng-container>
+  
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="acoes">
+          <th class="mat-header" mat-header-cell *matHeaderCellDef>AÇÕES</th>
+          <td mat-cell *matCellDef="let row">
+            <a class="edit" routerLink="update/{{row.id}}">
+              <i class="material-icons">edit</i>
+            </a>
+            <a class="delete" (click)="delete(row.id)" >
+              <i class="material-icons">delete</i>
+            </a>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">Sem dados na tabela</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  

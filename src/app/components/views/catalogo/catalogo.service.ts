@@ -5,14 +5,26 @@ import { Injectable } from '@angular/core';
 import { Catalogo } from './catalogo.model';
 import { environment } from 'src/environments/environment';
 
+
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
+
 @Injectable({
   providedIn: 'root'
 })
 export class CatalogoService {
 
   baseUrl: String = environment.baseUrl
+  
 
-  constructor(private http: HttpClient) { }
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+1
+
+  constructor(private http: HttpClient, private _snack: MatSnackBar) { }
 
   findById(id: String): Observable<Catalogo>{
     const url = `${this.baseUrl}/catalogo/${id}`
@@ -42,6 +54,13 @@ export class CatalogoService {
   delete(id: String): Observable<void>{
     const url = `${this.baseUrl}/catalogo/${id}`
     return this.http.delete<void>(url)
+  }
+  
+  mensagem(str: String): void{
+    this._snack.open(`${str}`, "OK", {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+    });
   }
 
 
