@@ -8,17 +8,23 @@
 
      <mat-form-field class="form">
         <mat-label>Cargo</mat-label>
-        <input matInput type="text" [(ngModel)]="pessoa.cargo" name="cargo" placeholder="informe o cargo do colaborador">
+        <mat-select [(ngModel)]="pessoa.cargo_id" name="cargo_id">
+            <mat-option *ngFor="let item of cargo" [value]="item.id">{{item.descricao}}</mat-option>
+        </mat-select>
      </mat-form-field>
 
      <mat-form-field class="form">
         <mat-label>Equipe</mat-label>
-        <input matInput type="text" [(ngModel)]="pessoa.equipe" name="equipe" placeholder="A qual equipe pertence este colaborador">
+        <mat-select [(ngModel)]="pessoa.equipe_id" name="equipe_id">
+            <mat-option *ngFor="let item of equipe" [value]="item.id" >{{ item.descricao }}</mat-option>
+        </mat-select>
     </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Status</mat-label>
-        <input matInput type="text" [(ngModel)]="pessoa.status" name="status" placeholder="Colaborador ativo?">
+        <mat-select name="status_id" [(ngModel)]="pessoa.status_id" >
+          <mat-option *ngFor="let item of status" [value]="item.id">{{item.descricao}}</mat-option>
+        </mat-select>
     </mat-form-field>
 
     <div class="buttons">

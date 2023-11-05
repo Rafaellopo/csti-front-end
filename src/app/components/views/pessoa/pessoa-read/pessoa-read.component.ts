@@ -14,6 +14,8 @@ export class PessoaReadComponent implements OnInit {
 
   pessoa: Pessoa[] = [];
 
+  status: any[] = []
+
   title: string = "Colaboradores";
 
   btnCadastro: String = "Novo Colaborador";
@@ -21,12 +23,13 @@ export class PessoaReadComponent implements OnInit {
   constructor(private pessoaService: PessoaServiceService, private router: Router) { }
 
   ngOnInit(): void {
-    this.findAll();
+    this.findAll()
   }
 
   findAll() {
     this.pessoaService.findAll().subscribe((resposta) => {
       this.pessoa = resposta
+      console.log(resposta)
     }, err => {
       this.pessoaService.mensagem('A busca não retornou resultado')
     })
@@ -39,6 +42,7 @@ export class PessoaReadComponent implements OnInit {
       })
     }
   }
+
 
   create():void{
     this.router.navigate(["pessoa/create"]);

@@ -34,12 +34,13 @@ export class PessoaServiceService {
   }
 
   create(pessoa: Pessoa): Observable<Pessoa> {
-    const url = `${this.baseUrl}/pessoa`
+    const url = `${this.baseUrl}/pessoa?status=${pessoa.status_id}&cargo=${pessoa.cargo_id}&equipe=${pessoa.equipe_id}`
     return this.http.post<Pessoa>(url, pessoa)
   }
 
+
   update(pessoa: Pessoa): Observable<void> {
-    const url = `${this.baseUrl}/pessoa/${pessoa.id}`
+    const url = `${this.baseUrl}/pessoa/${pessoa.id}?status=${pessoa.status_id}&cargo=${pessoa.cargo_id}&equipe=${pessoa.equipe_id}`
     return this.http.put<void>(url, pessoa)
   }
 
@@ -48,8 +49,25 @@ export class PessoaServiceService {
     return this.http.delete<void>(url)
   }
 
+  listStatus(): Observable<any[]>{
+    const url = `${this.baseUrl}/status`
+    return this.http.get<any[]>(url)
+  }
+
+  listCargo():Observable<any[]>{
+    const url = `${this.baseUrl}/cargo`
+    return this.http.get<any[]>(url)
+  }
+
+  listEquipe():Observable<any[]>{
+    const url = `${this.baseUrl}/equipe`
+    return this.http.get<any[]>(url)
+  }
+
+
   mensagem(str: String): void {
     this._snack.open(`${str}`, "OK", {
+      duration: 6000,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });

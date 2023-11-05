@@ -58,6 +58,7 @@ export class CatalogoService {
   
   mensagem(str: String): void{
     this._snack.open(`${str}`, "OK", {
+      duration: 6000,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
     });

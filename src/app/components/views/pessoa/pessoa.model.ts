@@ -1,7 +1,11 @@
 export interface Pessoa{
     id?: String;
-    cargo: String;
+    cargo?: String;
     nome: String;
-    status: String;
     equipe: String;
+    status?: String,
+    status_id?: String;
+    cargo_id?: String,
+    equipe_id?: String,
+
 }
