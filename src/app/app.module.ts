@@ -12,12 +12,17 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
+
 import { CatalogoReadComponent } from './components/views/catalogo/catalogo-read/catalogo-read.component';
 import { CatalogoCreateComponent } from './components/views/catalogo/catalogo-create/catalogo-create.component';
 import { CatalogoUpdateComponent } from './components/views/catalogo/catalogo-update/catalogo-update.component';
+
 import { PessoaReadComponent } from './components/views/pessoa/pessoa-read/pessoa-read.component';
 import { PessoaCreateComponent } from './components/views/pessoa/pessoa-create/pessoa-create.component';
 import { PessoaUpdateComponent } from './components/views/pessoa/pessoa-update/pessoa-update.component';
+
+import { ListaReadComponent} from './components/views/lista/lista-read/lista-read.component';
+import { ListaCreateComponent } from './components/views/lista/lista-create/lista-create.component';
 
 
 //Imports Angular material
@@ -32,6 +37,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
+import { ListaUpdateComponent } from './components/views/lista/lista-update/lista-update.component';
 
 
 @NgModule({
@@ -46,7 +52,10 @@ import {MatSelectModule} from '@angular/material/select';
     CatalogoUpdateComponent,
     PessoaReadComponent,
     PessoaCreateComponent,
-    PessoaUpdateComponent
+    PessoaUpdateComponent,
+    ListaReadComponent,
+    ListaCreateComponent,
+    ListaUpdateComponent,
   ],
   imports: [
     BrowserModule,

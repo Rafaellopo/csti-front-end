@@ -7,6 +7,9 @@ import { CatalogoUpdateComponent } from './components/views/catalogo/catalogo-up
 import { PessoaReadComponent } from './components/views/pessoa/pessoa-read/pessoa-read.component';
 import { PessoaCreateComponent } from './components/views/pessoa/pessoa-create/pessoa-create.component';
 import { PessoaUpdateComponent } from './components/views/pessoa/pessoa-update/pessoa-update.component';
+import { ListaReadComponent } from './components/views/lista/lista-read/lista-read.component';
+import { ListaCreateComponent } from './components/views/lista/lista-create/lista-create.component';
+import { ListaUpdateComponent } from './components/views/lista/lista-update/lista-update.component';
 
 const routes: Routes = [
   {
@@ -37,6 +40,18 @@ const routes: Routes = [
   {
     path: 'pessoa/update/:id',
     component: PessoaUpdateComponent
+  },
+  {
+    path: 'lista',
+    component: ListaReadComponent
+  },
+  {
+    path: 'lista/create',
+    component: ListaCreateComponent
+  },
+  {
+    path: 'lista/update/:id',
+    component: ListaUpdateComponent
   },
 
 ];

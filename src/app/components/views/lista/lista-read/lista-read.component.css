@@ -1,0 +1,30 @@
+.content{
+    width: 90%;
+    margin: 1.4rem auto auto auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title h1{
+    font-size: 2rem;
+    font-weight: 500;
+    color: yellow;
+}
+
+button{
+    margin-bottom: .8rem;
+}
+
+.table{
+    width: 100%;
+}
+ .delete{
+    color: red;
+ }
+
+ .edit{
+    color: rgb(224, 210, 10);
+ }
