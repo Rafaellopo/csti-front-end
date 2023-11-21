@@ -10,6 +10,7 @@ import { PessoaUpdateComponent } from './components/views/pessoa/pessoa-update/p
 import { ListaReadComponent } from './components/views/lista/lista-read/lista-read.component';
 import { ListaCreateComponent } from './components/views/lista/lista-create/lista-create.component';
 import { ListaUpdateComponent } from './components/views/lista/lista-update/lista-update.component';
+import { ItemListaReadComponent } from './components/views/itemLista/item-lista-read/item-lista-read.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'lista/update/:id',
     component: ListaUpdateComponent
+  },
+  {
+    path: 'lista/:id/itens',
+    component: ItemListaReadComponent
   },
 
 ];

@@ -43,6 +43,12 @@ export class ListaService {
     return this.http.put<Lista>(url, lista)
   }
 
+
+  delete(id: String): Observable<void>{
+    const url = `${this.baseUrl}/listas/${id}`
+    return this.http.delete<void>(url)
+  }
+
   listarEquipe(): Observable<any[]>{
     const url = `${this.baseUrl}/equipe`
     return this.http.get<any[]>(url)

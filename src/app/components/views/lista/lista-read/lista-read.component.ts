@@ -20,13 +20,23 @@ export class ListaReadComponent implements OnInit {
     this.findAll()
   }
 
-  findAll(){
-    this.service.findAll().subscribe((resp)=>{
+  findAll() {
+    this.service.findAll().subscribe((resp) => {
       this.listas = resp
     })
   }
 
-  goCreateNewLista(){
+  delete(event) {
+    if (confirm("Realmente deseja excluir?") == true) {
+      this.service.delete(event).subscribe((resp) => {
+        window.location.reload()
+      })
+    } else {
+      this.service.mensagem("O item não foi removido")
+    }
+  }
+
+  goCreateNewLista() {
     this.router.navigate(["lista/create"])
   }
 }

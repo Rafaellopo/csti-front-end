@@ -1,0 +1,59 @@
+.content{
+    width: 98%;
+    margin: 1.4rem auto auto auto;
+    display: table;
+    
+}
+
+.card {
+    max-width: 25%;
+    margin: .5rem;
+  }
+  
+  .header-image {
+    background-image: url('https://pje2g.trf1.jus.br/pje/img/brasaoRep.png');
+    background-size: cover;
+  }
+
+  mat-slide-toggle {
+    color: blue;
+  }
+  
+  
+  .title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .title h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: yellowgreen;
+  }
+  
+  button{
+      margin-bottom: .8rem;
+  }
+
+  .mat-form-field {
+    font-size: 1.1rem;
+    width: 97%;
+    margin-left: 0.5rem;
+  }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .edit {
+    color: rgb(224, 210, 10);
+  }
+  
+  .delete {
+    color: red;
+    margin-left: 0.5rem;
+  }
+  .mat-header {
+    width: 5rem;
+  }

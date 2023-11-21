@@ -23,6 +23,9 @@ import { PessoaUpdateComponent } from './components/views/pessoa/pessoa-update/p
 
 import { ListaReadComponent} from './components/views/lista/lista-read/lista-read.component';
 import { ListaCreateComponent } from './components/views/lista/lista-create/lista-create.component';
+import { ListaUpdateComponent } from './components/views/lista/lista-update/lista-update.component';
+
+import { ItemListaReadComponent } from './components/views/itemLista/item-lista-read/item-lista-read.component';
 
 
 //Imports Angular material
@@ -37,7 +40,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
-import { ListaUpdateComponent } from './components/views/lista/lista-update/lista-update.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -56,6 +60,7 @@ import { ListaUpdateComponent } from './components/views/lista/lista-update/list
     ListaReadComponent,
     ListaCreateComponent,
     ListaUpdateComponent,
+    ItemListaReadComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +80,8 @@ import { ListaUpdateComponent } from './components/views/lista/lista-update/list
     MatFormFieldModule,
     MatSnackBarModule,
     MatSelectModule,
+    MatGridListModule,
+    MatSlideToggleModule,
 
   ],
   exports: [
